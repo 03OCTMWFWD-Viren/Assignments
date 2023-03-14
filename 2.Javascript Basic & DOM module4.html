@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        h1{
+            text-align: center;
+            color: rgb(12, 26, 6);
+        }
+        hr{
+            width: 80%;
+            border: 2px solid rgb(22, 16, 15);
+        }
+        #hello{
+            background-color: teal;
+            margin: 20px auto;
+            padding: 3px 30px;
+        }
+        h2{
+            font-size: 25px;
+            color: black;
+            background-color: violet;
+        }
+        p{
+            font-size: 18px;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>JAVASCRIPT BASIC & DOM Assignment</h1>
+        <hr>
+    </div>
+    <div class="container">
+        <div id="hello">
+        <h2>1. What is Javascript ?</h2>
+        <p>-> JavaScript (JS) is a lightweight, interpreted, or just-in-time compiled programming language with first-class functions.
+             While it is most well-known as the scripting language for Web pages</p>
+        <p>-> Also use it, such as Node.js, Apache CouchDB and Adobe Acrobat. JavaScript is a prototype-based, multi-paradigm, 
+            single-threaded, dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles.</p>
+        <p>-> JavaScript's dynamic capabilities include runtime object construction, variable parameter lists, function variables, dynamic script creation , object introspection , and source-code recovery.</p>   
+        <!-- <hr> -->
+    </div>
+    <div id="hello">
+        <h2>2. What is the use of isNaN function ?</h2>
+        <p>-> isNaN() is a function property of the global object. For number values, isNaN() tests if the number is the value NaN . </p>
+        <p>-> When the argument to the isNaN() function is not of type Number, the value is first coerced to a number, and the resulting
+             value is then compared against NaN .</p>
+    </div>
+    <div id="hello">
+        <h2>3. What is negative Infinity ?</h2>
+        <p>-> NEGATIVE_INFINITY is a special numeric value.</p>
+        <p>-> that is returned when an arithmetic operation or mathematical function generates a negative value greater than the largest representable number in JavaScript</p>
+        <p>-> JavaScript displays the NEGATIVE_INFINITY value as -Infinity.</p>
+    </div>
+    <div id="hello">
+        <h2>4. Which company developed JavaScript ?</h2>
+        <p>-> JavaScript was invented by Brendan Eich in 1995.</p>
+        <p>-> It was developed for Netscape 2, and became the ECMA-262 standard in 1997. </p>
+        <p>-> Both "Java" and "JavaScript" are trademarks or registered trademarks of Oracle in the U.S. and other countries</p>
+    </div>
+    <div id="hello">
+        <h2>5. What are undeclared and undefined variables ?</h2>
+        <p>-> In conclusion, "undefined" and "not defined" are two different values in JavaScript.</p>
+        <p>-> Undefined variable means a variable has been declared but does not have a value.</p>
+        <p>-> Undeclared variable means that the variable does not exist in the program at all.</p>
+    </div>
+    <div id="hello">
+        <h2>6. Write the code for adding new elements dynamically ?</h2>
+        <p>-> Creation of new element: New elements can be created in JS by using the createElement() method.
+            document.createElement("&lt; tagName &gt;");  
+                 Where &lt; tagName &gt; can be any HTML 
+                 tagName like div, ul, button, etc.
+                
+                 newDiv element has been created
+                For Eg: let newDiv = document.createElement("div");
+        </p>
+    </div>
+    <div id="hello">
+        <h2>7. What is the difference between ViewState and SessionState ?</h2>
+        <p>-> The basic difference between ViewState and SessionState is</p>
+        <p>-> ViewState is to manage state at the client's end, making state management easy for end-user.</p>
+        <p>-> while SessionState manages state at the server's end, making it easy to manage content from this end too.</p>
+    </div>
+    <div id="hello">
+        <h2>8. What is === operator ?</h2>
+        <p>-> === called strict equality operator.</p>
+        <p>-> checks whether its two operands are equal, returning a Boolean result.</p>
+        <p>-> Unlike the equality operator, the strict equality operator always considers operands of different types to be different.</p>
+        <p>Example :
+            console.log(1 === 1);
+            Expected output: true
+        </p>
+    </div>
+    <div id="hello">
+        <h2>9. How can the style/class of an element be changed ?</h2>
+        <p>->  you can also change style of an element by getting a reference to it and then use its setAttribute method to specify the CSS property and its value.</p>
+        <p>->  setAttribute removes all other style properties that may already have been defined in the element's style object.</p>
+        <p>->  Another way to alter the style of an element is by changing its class attribute. class is a reserved word in JavaScript, so in order to access the element's class, you use element. className .</p>
+    </div>
+    <div id="hello">
+        <h2>10. How to read and write a file using JavaScript ?</h2>
+        <p>-> file = fopen(getScriptPath(),0); The function fread() is used for reading the file content.</p>
+        <p>-> str = fread(file,flength(file)) ; The function fwrite() is used to write the contents to the file.</p>
+        <p>-> file = fopen("c:\MyFile.txt", 3);// opens the file for writing.</p>
+    </div>
+    <div id="hello">
+        <h2>11. What are all the looping structures in JavaScript ?</h2>
+        <p>-> Loops offer a quick and easy way to do something repeatedly.</p>
+        <p>-> There are many different kinds of loops, but they all essentially do the same thing: they repeat an action some number of times.</p>
+        <p>-> The statements for loops provided in JavaScript are:  
+             <p> : for - loops through a block of code a number of times </p>
+             <p> : for/in - loops through the properties of an object </p>
+             <p> : while statement </p>
+             <p> : for/of - loops through the values of an iterable object </p>
+             <p> : while - loops through a block of code while a specified condition is true </p>
+             <p> : do/while - also loops through a block of code while a specified condition is true </p></p>
+    </div>
+    <div id="hello">
+        <h2>12. How can you convert the string of any base to an integer in JavaScript ?</h2>
+        <p>-> To convert a string to an integer parseInt(), Number(), and Unary operator(+) function is used in javascript.</p>
+        <p>-> parseInt() function returns Nan( not a number) when the string doesn't contain number.</p>
+        <p>-> If a string with a number is sent, then only that number will be returned as the output.</p>
+        <p>-> parseInt() The parseInt() function parses a string argument and returns an integer of the specified radix (the base in mathematical numeral systems)</p>
+    </div>
+    <div id="hello">
+        <h2>13. What is the function of the delete operator ?</h2>
+        <p>-> The delete operator removes a property from an object.</p>
+        <p>-> If the property's value is an object and there are no more references to the object,</p>
+        <p>-> the object held by that property is eventually released automatically.</p>
+    </div>
+    <div id="hello">
+        <h2>14. What are all the types of Pop up boxes available in JavaScript ?</h2>
+        <p>-> The popup is specified as an HTML file, which can include CSS and JavaScript files, as a normal web page does.</p>
+        <p>-> JavaScript has three kind of popup boxes: Alert box, Confirm box, and Prompt box.</p>
+        <p>-> An alert box is often used if you want to make sure information comes through to the user.</p>
+        <p>-> A confirm box is often used if you want the user to verify or accept something.</p>
+        <p>-> A prompt box is often used if you want the user to input a value before entering a page.</p>
+    </div>
+    <div id="hello">
+        <h2>15. What is the use of Void (0) ?</h2>
+        <p>-> The void operator is often used merely to obtain the undefined primitive value, usually using void(0).</p>
+        <p>-> You might come across the term “JavaScript:void(0)” while going through HTML documents.</p>
+        <p>->  It is used to prevent any side effects caused while inserting an expression in a web page.</p>
+    </div>
+    <div id="hello">
+        <h2>16. How can a page be forced to load another page in JavaScript ?</h2>
+        <p>-> For load another page in Javascript you can youse The location.reload() method.</p>
+        <p>-> The location.reload() method reloads the current URL, like the Refresh button.</p>
+        <p>-> In JavaScript, we can use window. location object to force a page to load another page.</p>
+    </div>
+    <div id="hello">
+        <h2>17. What are the disadvantages of using innerHTML in JavaScript ?</h2>
+        <p>-> Event handlers attached to any DOM element are preserved.</p>
+        <p>-> Replacement is done everywhere.</p>
+        <p>-> It is not possible to append innerHTML.</p>
+        <p>-> Breaks the document.</p>
+        <p>-> Used for Cross-site Scripting.</p>
+    </div>
+    </div>
+</body>
+</html>
