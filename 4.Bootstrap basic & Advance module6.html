@@ -5,8 +5,135 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        .container{
+            width: 85%;
+            margin: 0 auto;
+        }
+        h1{
+            text-align: center;
+            color: rgb(12, 26, 6);
+        }
+        hr{
+            width: 90%;
+            border: 2px solid rgb(22, 16, 15);
+        }
+        #new{
+            background-color: turquoise;
+            margin: 20px auto;
+            padding: 5px 10px;
+        }
+        h2{
+            font-size: 28px;
+            background-color: blanchedalmond;
+        }
+        p{
+            font-size: 20px;
+        }
+        li{
+            font-size: 20px;
+            line-height: 30px;
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="container">
+        <h1>MODULE: 6 (Bootstrap Basic & Advance)</h1>
+        <hr>
+    </div>
+    <div class="container">
+        <div id="new">
+            <h2>1.What are the advantages of Bootstrap ?</h2>
+            <p>Easy to prevent repetitions among multiple projects.</p>
+            <p>Responsive design that can be used to adapt screen sizes and choose what shows and what doesn't on any given device.</p>
+            <p>Maintaining consistency among projects when using multiple developer teams.</p>
+            <p>Quick design of prototypes.</p>
+            <p>Cross-browser compatibility</p>
+            <p>Responsiveness. ...
+                Highly customizable. ...
+                Extremely user-centric. ...
+                Top-notch support. ...</p>
+        </div>
+        <div id="new">
+            <h2>2.What is Bootstrap Container, and how does it work ?</h2>
+            <p>Containers are the most basic layout element in Bootstrap and are required when using our default grid system.</p>
+            <p> Containers are used to contain, pad, and (sometimes) center the content within them.</p>
+            <p>While containers can be nested, most layouts do not require a nested container.</p>
+            <p>.container, which sets a max-width at each responsive breakpoint</p>
+            <p>.container-fluid, which is width: 100% at all breakpoints</p>
+            <p>.container-{breakpoint}, which is width: 100% until the specified breakpoint</p>
+        </div>
+        <div id="new">
+            <h2>3.What are the default Bootstrap text settings ?</h2>
+            <p>Bootstrap Default Settings:
+                <p>Bootstrap default font-size of 16px.</p>
+                <p>Bootstrap default font-family is "Helvetica Neue", Helvetica, Arial, sans-serif.</p>
+                <p> In addition, all &lt; p &gt; elements have margin-top: 0 and margin-bottom: 1rem (16px by default).</p>
+            </p>
+        </div>
+        <div id="new">
+            <h2>4.What do you know about the Bootstrap Grid System ?</h2>
+            <p>Bootstrap's grid system uses a series of containers, rows, and columns to layout and align content.</p>
+            <p>It's built with flexbox and is fully responsive.</p>
+            <p>Containers provide a means to center and horizontally pad your site's contents. Use .container for a responsive pixel width or .container-fluid for width: 100% across all viewport and device sizes.</p>
+            <p>Rows are wrappers for columns. Each column has horizontal padding (called a gutter) for controlling the space between them.</p>
+            <p>This padding is then counteracted on the rows with negative margins. This way, all the content in your columns is visually aligned down the left side.</p>
+            <p>In a grid layout, content must be placed within columns and only columns may be immediate children of rows.</p>
+        </div>
+        <div id="new">
+            <h2>5.What is the difference between Bootstrap 4 and Bootstrap 5 ?</h2>
+            <p>The form elements in Bootstrap 4 have defaulted to the browser-provided view.</p>
+            <p> in Bootstrap 5, the form elements have a custom design that enables them to have a consistent look and feel in all browsers.</p>
+            <p>in Bootstrap 4 it has limited color and in Bootstrap 5 it has Extra color added with improved color palette.</p>
+            <p>Bootstrap 4 support both IE10 and 11.Bootstrap 5 doesn't support IE10 and 11.</p>
+        </div>
+        <div id="new">
+            <h2>6.What is a Button Group, and what is the class for a basic Button Group ?</h2>
+            <p>A button group is a grouping of buttons whose actions are related to each other.</p>
+            <p>Button groups allow multiple buttons to be stacked together on a single line.</p>
+            <p>This is useful when you want to place items like alignment buttons together.</p>
+            <p>“Button Groups” in Bootstrap is a class of name “btn-group” which is used to create series of buttons in groups (without spaces) vertically or horizontally.</p>
+            <p> You can add on optional JavaScript radio and checkbox style behavior with Bootstrap Button Plugin.</p>
+        </div>
+        <div id="new">
+            <h2>7.How can you use Bootstrap to make thumbnails ?</h2>
+            <p>Add an &lt; a &gt; tag with the class of .thumbnail around an image.</p>
+            <p>This adds four pixels of padding and a gray border.</p>
+            <p>On hover, an animated glow outlines the image.</p>
+        </div>
+        <div id="new">
+            <h2>8.In Bootstrap 4, what is Flexbox ?</h2>
+            <p> Bootstrap 4 now uses flexbox, instead of floats, to handle the layout.</p>
+            <p>Quickly manage the layout, alignment, and sizing of grid columns, navigation, components, and more with a full suite of responsive flexbox utilities.</p>
+            <p>Flexbox is a one-dimensional layout method for arranging items in rows or columns.</p>
+        </div>
+        <div id="new">
+            <h2>9.How can one create an alert in Bootstrap ?</h2>
+            <p>Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages.</p>
+            <p>To create an alert box, use the . alert class along with one of the . alert-* classes to specify the kind of alert.</p>
+            <p> Bootstrap Alerts are used to provide an easy way to create predefined alert messages.</p>
+            <p>Alerts are created with the .alert class, followed by one of the four contextual classes .alert-success, .alert-info, .alert-warning or .alert-danger:</p>
+        </div>
+        <div id="new">
+            <h2>10.What is bootstrap card and how would you create one ?</h2>
+            <p>A bootstrap card is a flexible and extensible content container.</p>
+            <p>It includes options for headers and footers, a wide variety of content, contextual background colors, and powerful display options</p>
+            <p>Cards support a wide variety of content, including images, text, list groups, links, and more.</p>
+            <ul>
+                <li>The building block of a card is the .card-body.</li>
+                <li>links are added by adding .card-link to an &lt; a &gt; tag.</li>
+                <li>Card titles are used by adding .card-title to a &lt; h* &gt; tag.</li>
+                <li>.card-text, text can be added to the card.</li>
+                <li>.card-img-top places an image to the top of the card.</li>
+                <li>Subtitles are used by adding a .card-subtitle to a &lt; h* &gt; tag.</li>
+                <li>Use the Bootstrap grid system and its .row-cols classes to control how many grid columns you show per row.</li>
+                <li>Cards include various options for customizing their backgrounds, borders, and color.</li>
+            </ul>
+        </div>
+    </div>
 </body>
 </html>
