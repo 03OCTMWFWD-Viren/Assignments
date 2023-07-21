@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1,
+        a {
+            text-align: center;
+            color: black;
+        }
+
+        body {
+            background-color: skyblue;
+        }
+
+        h2 {
+            background-color: khaki;
+            font-size: 25px;
+        }
+
+        p,
+        li {
+            background: floralwhite;
+            font-size: 20px;
+            list-style: none;
+        }
+
+        .out {
+            background: floralwhite;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1><a href="">JavaScript Essentials And Advanced</a></h1>
+    <hr>
+    <div class="js">
+        <h2>1. Write a program to Show an alert ?</h2>
+        <p>alert("hello"); <br>
+            or <br>
+            &lt; button onclick="Alert()">Click me /button &gt;
+            function Alert() {
+            alert("Welcome to JavaScript")
+            }
+        </p>
+        <hr>
+        <h2>2. What will be the result for these expressions ?</h2>
+        <ol>
+            <li>5 > 4</li>
+            <li>"apple" > "pineapple"</li>
+            <li>"2" > "12"</li>
+            <li>undefined == null</li>
+            <li>undefined === null</li>
+            <li>null == "\n0\n"</li>
+            <li>null === + "\n0\n"</li>
+        </ol>
+        <ol>
+            <li>console.log(5 > 4); true </li>
+            <li>console.log("apple" > "pineapple"); false</li>
+            <li>console.log("2" > "12"); false</li>
+            <li>console.log(undefined == null); false</li>
+            <li>console.log(undefined === null); false</li>
+            <li>console.log(null == "\n0\n"); false</li>
+            <li>console.log(null === + "\n0\n"); false</li>
+        </ol>
+        <hr>
+        <h2>3. Will alert be shown?</h2>
+        <p>Yes alert will be shown.</p>
+        <hr>
+        <h2>4. What is the code below going to output?</h2>
+        <pre class="out">
+            var y = 1;
+            if(function f(){}){
+                y += typeof f;
+            }
+            console.log(y);
+            
+            output:
+               1 is undefined
+        </pre>
+        <hr>
+        <h2>5. The following function returns true if the parameter age is greater than 18. Otherwise it asks
+            for a
+            confirmation and returns its result:</h2>
+        <pre class="out">
+            function checkAge(age){
+                if(age > 18){
+                    return true;
+                }
+                else{
+                    return ("you are child")
+                }
+            }
+        </pre>
+        <hr>
+        <h2>6. Replace Function Expressions with arrow functions in the code below:</h2>
+        <pre class="out">
+            Function ask(question, yes, no)
+                    {
+                        if (confirm(question))yes();
+                        else no();
+                    }
+                    ask("Do you agree?", function()
+                    { alert("You agreed."); },
+                    function() { 
+                        alert("You canceled the execution."); } 
+                    )
+            ans:-
+                    
+            function ask(question, yes, no) {
+                if (confirm(question)) yes();
+                else no();
+              }
+              
+              ask(
+                "Do you agree?",
+                () => alert("You agreed."),
+                () => alert("You canceled the execution.")
+              );
+        </pre>
+        <hr>
+        <h2>7. Write the code, one line for each action:</h2>
+        <pre class="out">
+            Create an empty object user.
+            Add the property name with the value John.
+            Add the property surname with the value Smith.
+            Change the value of the name to Pete.
+            Remove the property name from the object.
+
+            ans:-
+
+            const user = "";
+            user.name = "john";
+            user.surname = "smith";
+            user.name = "pete";
+            delete user.name;""
+        </pre>
+        <hr>
+        <h2>8. Is array copied?</h2>
+        <pre class="out">
+            let fruits = ["Apples", "Pear", "Orange"];
+
+             push a new value into the "copy"
+
+            let shoppingCart = fruits;
+
+            shoppingCart.push("Banana");
+
+             what's in fruits? alert( fruits.length ); 
+
+            ans:-
+            
+            
+            let fruits = ["Apples", "Pear", "Orange"];
+
+            let shoppingCart = fruits;
+
+            shoppingCart.push("Banana");
+
+            alert( fruits.length ); 
+            
+       ans:-fruits length is 4.
+        </pre>
+        <hr>
+        <h2>9. Map to names</h2>
+        <pre class="out">
+            let john = { name: "John", age: 25 };
+            let pete = { name: "Pete", age: 30 };
+            let mary = { name: "Mary", age: 28 };
+
+            let users = [ john, pete, mary ];
+
+      ans:- let names = users.map(item => item.name);
+
+            alert( names ); // John, Pete, Mary
+        </pre>
+        <hr>
+        <h2>10. Map to objects</h2>
+        <pre class="out">
+            let john = { name: "John", surname: "Smith", id: 1 };
+            let pete = { name: "Pete", surname: "Hunt", id: 2 };
+            let mary = { name: "Mary", surname: "Key", id: 3 };
+            let users = [john, pete, mary];
+      ans:- let usersMapped = users.map(user => ({ fullName: `${user.name} ${user.surname}`, id: user.id }));
+        
+            usersMapped = [
+            { fullName: "John Smith", id: 1 }, 
+            { fullName: "Pete Hunt", id: 2 }, 
+            { fullName: "Mary Key", id: 3 }  
+            ] 
+
+            console.log(usersMapped);
+            alert(usersMapped[0].id) // 1
+            alert(usersMapped[0].fullName) // John Smith
+        </pre>
+        <h2>11. Sum the properties There is a salaries object with arbitrary number of salaries. Write the
+            function
+            sumSalaries(salaries) that returns the sum of all salaries using Object.values and the for..of
+            loop.If salaries is empty, then the result must be 0.</h2>
+        <pre class="out">
+            let salaries = { 
+                "John": 100, 
+                "Pete": 300, 
+                "Mary": 250 
+                }; 
+                alert( sumSalaries(salaries) ); // 650
+
+                ans:- 
+
+                function sumSalaries(salaries) {
+                    return Object.values(salaries).reduce((a, b) => a + b, 0) // 650
+                }
+            </pre>
+        <hr>
+        <h2>12. Destructuring assignment We have an object: Write the Destructuring assignment that reads:</h2>
+        <pre class="out">
+            let user = {
+                name: "John",
+                years: 30
+            };
+
+            Name property into the variable name.
+            ans: -
+                const { name: Name = "Unknown" } = user;       
+                console.log(Name);
+          
+            Year's property into the variable age.
+            ans :-
+                const { years: Age } = user;
+                console.log(Age)
+        
+            isAdmin property into the variable isAdmin (false, if no such property)
+            ans :-
+                const { isAdmin: isAdmin = false } = user;
+                console.log(isAdmin)
+        </pre>
+        <hr>
+        <h2>13. Turn the object into JSON and back Turn the user into JSON and then read it back into another
+            variable.</h2>
+        <pre class="out">
+            user = { name: "John Smith", age: 35};
+
+            ans:- 
+
+            turn object into JSON (string)
+            let JSON_obj = JSON.stringify(user);
+            console.log(JSON_obj)  
+
+            turn JSON into object (object)
+            let obj = JSON.parse(JSON_obj);
+            console.log(obj);
+        </pre>
+        <hr>
+        <h2>14. Create a program to hide/show the password</h2>
+        <pre class="out">
+            &lt; form action="" &gt;
+            &lt; label for="pass" &gt;Password&lt; /label &gt;
+            &lt; input type="password" name="pass" id="pass" &gt;
+            &lt; label for="show" &gt;
+            &lt; input type="checkbox" onclick="Toggle()" name="show" id="show" &gt;
+            Show Password
+            &lt; /label &gt;
+            &lt; /form &gt;
+
+            ans:-
+
+            function Toggle(){
+        let inp = document.getElementById("pass");
+        let chkbox = document.getElementById("show");
+
+        if(inp.type === Password){
+                    inp.type = "text";
+        }
+        else{
+                    inp.type = "password"
+        }
+            }
+        </pre>
+        <hr>
+        <h2>15. Create a program that will select all the classes and loop over and whenever i click the button
+            the alert should show</h2>
+        <pre class="out">
+            &lt; p class="info" &gt;Hi !!!&lt; /p &gt;
+        &lt; p class="info" &gt;i am viren.&lt; /p &gt;
+        &lt; p class="info" &gt;I live in Dwarka.&lt; /p &gt;
+        &lt; button onclick="showAlert()" &gt; Click me &lt; /button &gt;
+
+        &lt; script &gt;
+            let userInfo = document.querySelectorAll(".info")
+
+                function showAlert() {
+                userInfo.forEach(function (userData) {
+                alert(userData.textContent)
+                })
+                }
+        &lt; /script &gt;
+        </pre>
+
+        <hr>
+        <h2>Create a responsive header using proper JavaScript</h2>
+        <pre class="out">
+            css:
+            &lt; style &gt;
+            nav {
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+            }
+            nav ul {
+                display: flex;
+                list-style: none;
+            }
+            li {
+                padding-right: 20px;
+            }
+            nav.responsive ul {
+                display: block;
+                top: 0;
+                position: absolute;
+            }
+            .menu-icon {
+                display: none;
+            }
+            @media screen and (max-width: 600px) {
+                nav ul {
+                    display: none;
+                }
+                nav li {
+                    margin: 10px 0;
+                }
+                .menu-icon {
+                    display: block;
+                }
+            }
+            &lt; /style &gt; 
+            html: 
+            &lt; header &gt;
+                        &lt; navbar &gt;
+                            &lt; div class="logo" &gt;Logo&lt; /div &gt;
+                            &lt; ul &gt;
+                                &lt; li &gt;&lt; a href="#" &gt;Home&lt; /a &gt;&lt; /li &gt;
+                                &lt; li &gt;&lt; a href="#" &gt;About&lt; /a &gt;&lt; /li &gt;
+                                &lt; li &gt;&lt; a href="#" &gt;Services&lt; /a &gt;&lt; /li &gt;
+                                &lt; li &gt;&lt; a href="#" &gt;Contact&lt; /a &gt;&lt; /li &gt;
+                            &lt; /ul &gt;
+                            &lt; div class="icon" onclick="Nav()" &gt; &#9776; &lt; /div &gt;
+                        &lt; /nav &gt;
+            &lt; /header &gt;
+
+            JavaScript:
+            &lt; script &gt;
+                    const nav = document.querySelector('navbar');
+                    const menuIcon = document.querySelector('.icon');
+
+                    function Nav() {
+                        nav.classList.toggle('responsive');
+                    }
+                &lt; /script &gt;
+        </pre>
+        <hr>
+        <h2>17. Create a form and validate using JavaScript</h2>
+        <p>
+        <form action="" onsubmit="event.preventDefault();">
+            <label for="Name">Full Name :- </label><br>
+            <input type="text" name="Name" id="Name">
+            <span id="NameError"></span>
+            <br><br>
+            <label for="password">Password :- </label><br>
+            <input type="password" name="pass" id="pass">
+            <span id="passError"></span>
+            <br><br>
+            <label for="confirmPassword">Confirm Password :- </label><br>
+            <input type="password" name="confirmPassword" id="confirmPassword">
+            <span id="confirmPassError"></span>
+            <br>
+            <input type="submit" value="Submit" onclick="validate()">
+            <input type="reset" value="Reset">
+        </form>
+        <script>
+            function validate() {
+                let name = document.getElementById("Name").value
+                let pass = document.getElementById("pass").value
+                let confirmPass = document.getElementById("confirmPassword").value
+
+                if (isNaN(name)) {
+                    document.getElementById("NameError").innerHTML = "okay"
+                } else {
+                    document.getElementById("NameError").innerHTML = "Only number are not allowed"
+                }
+
+                if (pass === confirmPass) {
+                    document.getElementById("passError").innerHTML = "Done"
+                    document.getElementById("confirmPassError").innerHTML = "Done"
+                } else {
+                    document.getElementById("passError").innerHTML = "Password not matched"
+                    document.getElementById("confirmPassError").innerHTML = "Password not matched"
+                }
+            }
+        </script>
+        </p>
+        <hr>
+        <h2>18. Create a modal box using css and Js with three buttons</h2>
+        <pre class="out">
+            css:- 
+            &lt; style &gt;
+                        .modal {
+                            display: none;
+                            position: fixed;
+                            top: 0;
+                            left: 0;
+                            z-index: 1;
+                            overflow: auto;
+                            height: 100%;
+                            width: 100%;
+                            background-color: rgba(0, 0, 0, 0.5);
+                        }
+                
+                        .modalContent {
+                            background-color: azure;
+                            margin: 15% auto;
+                            width: 50%;
+                            text-align: center;
+                            padding: 10px;
+                        }
+                
+                        button {
+                            margin: 5px;
+                        }
+            &lt; /style &gt;
+
+                    Js :-
+                    &lt; script &gt;
+                    let btn = document.createElement("button");
+                    document.body.appendChild(btn);
+                    btn.textContent = "Click Me!!!";
+                        
+                    let modal = document.createElement("div");
+                    document.body.appendChild(modal);
+                    modal.className = "modal"
+                        
+                    let modalContent = document.createElement("div")
+                    modal.appendChild(modalContent)
+                    modalContent.innerHTML += "< h2 >My Modal< /h2 >"
+                        
+                    let modalData = document.createElement("p")
+                    modalData.textContent = "Welcome to my Modal"
+                    modalContent.appendChild(modalData)
+                        
+                    modalContent.className = "modalContent"
+                        
+                    let modalBtn1 = document.createElement("button");
+                    modalContent.appendChild(modalBtn1)
+                    modalBtn1.textContent = "Show"
+                    modalBtn1.id = "show"
+                        
+                    let modalBtn2 = document.createElement("button");
+                    modalContent.appendChild(modalBtn2)
+                    modalBtn2.textContent = "Hide"
+                    modalBtn2.id = "hide"
+                        
+                    let modalBtn3 = document.createElement("button");
+                    modalContent.appendChild(modalBtn3)
+                    modalBtn3.textContent = "Close"
+                    modalBtn3.id = "close"
+                        
+                    function open() {
+                        modal.style.display = "block"
+                    }
+                        
+                    function close() {
+                        modal.style.display = "none"
+                    }
+                        
+                    function show() {
+                        modalData.style.display = "block"
+                    }
+                        
+                    function hide() {
+                        modalData.style.display = "none"
+                    }
+                        
+                    btn.addEventListener("click", open);
+                    modalBtn1.addEventListener("click", show)
+                    modalBtn2.addEventListener("click", hide)
+                    modalBtn3.addEventListener("click", close)
+                    &lt; /script &gt;
+        </pre>
+        <hr>
+        <h2>19. Use external js library to show slider</h2>
+        <pre class="out">
+            &lt; link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" / &gt;
+            &lt; script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js" &gt; &lt; /script &gt; 
+
+
+            Html :--
+            &lt; Body &gt; 
+                &lt; div class="swiper" &gt; 
+
+                    &lt; div class="swiper-wrapper" &gt; 
+                      
+                        &lt; div class="swiper-slide box1" &gt; Red Color&lt; /div &gt; 
+                        &lt; div class="swiper-slide box2" &gt; Green Color&lt; /div &gt; 
+                        &lt; div class="swiper-slide box3" &gt; Blue Color&lt; /div &gt; 
+                        ...
+                    &lt; /div &gt; 
+                
+                    &lt; div class="swiper-pagination" &gt; &lt; /div &gt; 
+            
+                    &lt; div class="swiper-button-prev" &gt; &lt; /div &gt; 
+                    &lt; div class="swiper-button-next" &gt; &lt; /div &gt; 
+            
+                    &lt; div class="swiper-scrollbar" &gt; &lt; /div &gt; 
+                &lt; /div &gt; 
+            &lt; /body &gt; 
+
+
+            css :--
+            &lt; style &gt;
+                .swiper {
+                    width: 600px;
+                    height: 300px;
+                }
+        
+                .box1 {
+                    background-color: red;
+                    text-align: center;
+                    padding-top: 100px;
+                    font-weight: bold;
+                }
+        
+                .box2 {
+                    background-color: green;
+                    text-align: center;
+                    padding-top: 100px;
+                    font-weight: bold;
+                }
+        
+                .box3 {
+                    background-color: lightblue;
+                    text-align: center;
+                    padding-top: 100px;
+                    font-weight: bold;
+                }
+            &lt; /style &gt;
+
+
+            js :--
+            &lt; script &gt;
+                const swiper = new Swiper('.swiper', {
+                    Optional parameters
+                    direction: 'horizontal',
+                    loop: true,
+
+                    pagination
+                    pagination: {
+                        el: '.swiper-pagination',
+                    },
+
+                    Navigation
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+
+                    // And if we need scrollbar
+                    scrollbar: {
+                        el: '.swiper-scrollbar',
+                    },
+                });
+            &lt; /script &gt;
+        </pre>
+        <hr>
+        <h2>20. Prevent the browser when i click the form submit button</h2>
+        <pre class="out">
+            yes 
+            &lt; form onsubmit="event.preventDefault();" &gt;
+                    &lt; input type="submit" value="Submit" &gt;
+            &lt; /form &gt;
+        </pre>
+        <hr>
+        <h2>21. What is JSON</h2>
+        <p>JSON stands for JavaScript Object Notation
+            <br><br>
+            JSON is a lightweight format for storing and transporting data
+            <br><br>
+            JSON is often used when data is sent from a server to a web page
+            <br><br>
+            JSON is "self-describing" and easy to understand
+        </p>
+        <hr>
+        <h2>22. What is promises</h2>
+        <p>A Promise is a special JavaScript object.
+            <br><br>
+            In most cases, a promise may be used for an asynchronous operation
+            <br><br>
+            The promise is either fulfilled or rejected.
+        </p>
+        <hr>
+        <h2>23. Write a program of promises and handle that promises also</h2>
+        <pre class="out">
+            programme of promise
+                        const fetchUserData = () => {
+                            return new Promise((resolve, reject) => {
+                            setTimeout(() => {
+                            const userData = { id: 1, name: 'John Doe', age: 25 };
+                            resolve(userData);
+                            }, 2000);
+                            });
+                        };
+            Handling promises
+                        fetchUserData()
+                            .then((userData) => {
+                                console.log('Fetched user data:', userData);
+                            })
+                            .catch((error) => {
+                                console.error('An error occurred:', error);
+                            });            
+        </pre>
+        <hr>
+        <h2>24. Use fetch method for calling an api https://fakestoreapi.com/products</h2>
+        <pre class="out">
+            let fakeStore = "https://fakestoreapi.com/products";
+
+                        async function products() {
+                            try {
+                                const response = await fetch(fakeStore);
+                                const data = await response.json();
+
+                                console.log(data);
+                            } catch (error) {
+                                console.log('Error', error);
+                            }
+                        }
+
+                        products();
+        </pre>
+        <hr>
+        <h2>25. Display all the product from the api in your HTML page</h2>
+        <pre class="out">
+            &lt; div class="products" &gt; &lt; /div &gt;
+                    
+                    &lt; script &gt;
+                    
+                    let fakeStore = "https://fakestoreapi.com/products";
+
+                    async function products() {
+                        try {
+                            const response = await fetch(fakeStore);
+                            const data = await response.json();
+                            const product = document.querySelector(".products");
+                            data.forEach(pData => {
+                                let productInfo = document.createElement("div")
+                                productInfo.innerHTML = `
+                                &lt; h4 &gt; ${pData.title}&lt; /h4 &gt; 
+                                &lt; h5 &gt; ${pData.price}&lt; /h5 &gt; 
+                                &lt; img src="${pData.image}" alt="${pData.title}" &gt; 
+                                `;
+                                product.appendChild(productInfo);
+                            });
+                        } catch (error) {
+                            console.log('Error', error);
+                        }
+                    }
+
+                    products();
+
+                    &lt; /script &gt;
+        </pre>
+        <hr>
+        <h2>27. What is JavaScript Output method?</h2>
+        <p>JavaScript can "display" data in different ways: <br><br>
+            Writing into an HTML element, using innerHTML <br><br>
+            Writing into the HTML output using document.write() <br><br>
+            Writing into an alert box, using window.alert() . <br><br>
+            Writing into the browser console, using console.log() .</p>
+    </div>
+    <hr>
+    <h2>28. How to used JavaScript Events to do all examples?</h2>
+    <dl class="out">
+        <dt>Input Events</dt>
+        <dd>onchange - When a user changes the content of an input field</dd>
+        <dd>onblur - When a user leaves an input field</dd>
+        <dd>onfocus - When an input field gets focus</dd>
+        <dd>onselect - When input text is selected</dd>
+        <dd>onreset - When a user clicks the reset button</dd>
+        <dd>onchange - When a user selects a dropdown value</dd>
+        <dd>onsubmit - When a user clicks the submit button</dd>
+        <dd>onkeyup - When the user releases a key</dd>
+        <dd>onkeypress - When a user is pressing/holding down a key</dd>
+        <dd>onkeydown - When a user is pressing/holding down a key</dd>
+        <dd>onkeydown vs onkeyup - Both</dd>
+        <dd>onkeyup - When the user releases a key</dd>
+        <br>
+        <dt>Mouse Events</dt>
+        <dd>onmousedown - When mouse is clicked: Alert which element</dd>
+        <dd>onmousedown/onmouseup - When pressing/releasing a mouse button</dd>
+        <dd>onmouseover/onmouseout - When the mouse passes over an element</dd>
+        <dd>onmousedown - When mouse is clicked: Alert which button</dd>
+        <dd>onmouseover/onmouseout - When moving the mouse over/out of an image</dd>
+        <dd>onmouseover an image map</dd>
+        <dd>onmousemove/onmouseout - When moving the mouse pointer over/out of an image</dd>
+        <br>
+        <dt>Click Events</dt>
+        <dd>onclick - When button is clicked</dd>
+        <dd>ondblclick - When a text is double-clicked</dd>
+        <dd>Acting to the onclick event</dd>
+        <br>
+        <dt>Load Events</dt>
+        <dd>onload - When the page has been loaded</dd>
+        <dd>onresize - When the browser window is resized</dd>
+        <dd>onerror - When an error occurs when loading an image</dd>
+        <dd>onload - When an image has been loaded</dd>
+        <dd>onunload - When the browser closes the document</dd>
+        <br>
+        <dt>Others</dt>
+        <dd>Which event type occurred?</dd>
+        <dd>What is the keycode of the key pressed?</dd>
+        <dd>Was the shift key pressed?</dd>
+        <dd>What are the coordinates of the cursor?</dd>
+        <dd>What are the coordinates of the cursor, relative to the screen?</dd>
+    </dl>
+</body>
+
+</html>
