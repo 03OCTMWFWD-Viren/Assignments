@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  background-color: rgb(180, 227, 245);
+}
+
+.rj {
+  background-color: rgb(110, 156, 141);
+}
+
+h1,
+a {
+  text-align: center;
+  color: black;
+  font-size: 35px;
+}
+
+h2 {
+  padding-top: 10px;
+  font-size: 25px;
+}
+
+p {
+  font-size: 20px;
+  line-height: 25px;
+  padding-bottom: 20px;
+  background-color: aliceblue;
+}
