@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background: url(../banner.png)no-repeat center center/cover;
+    border-radius: 20px;
+}
+
+.container {
+    height: 450px;
+}
+
+.contain {
+    width: 80%;
+    margin: auto;
+}
+
+main {
+    padding: 80px 0 80px 50px;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+h4 {
+    padding: 20px 0;
+}
+
+.inp {
+    padding: 10px;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    border: none;
+    font-weight: bold;
+    width: 250px;
+}
+
+.btn {
+    padding: 10px;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    background-color: seagreen;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}

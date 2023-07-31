@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section a:hover {
+    border-bottom: 2px solid orangered;
+}
+
+.wr {
+    height: 200px;
+}
+
+.contain {
+    width: 80%;
+    margin: auto;
+}
+
+h2 {
+    display: inline-block;
+    padding: 20px 0;
+}
+
+p {
+    display: inline-block;
+    margin: 20px;
+    text-decoration: none;
+    color: black;
+}
+
+.product {
+    cursor: pointer;
+    height: 100px;
+    padding: 10px;
+    width: 100px;
+    background-color: wheat;
+}
+
+.productlist {
+    display: flex;
+    justify-content: space-around;
+}
