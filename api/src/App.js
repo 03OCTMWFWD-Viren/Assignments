@@ -1,25 +1,41 @@
-import logo from './logo.svg';
 import './App.css';
+import React, { useState, useEffect } from 'react';
 
-function App() {
+export default function App() {
+  const [theme, setTheme] = useState('light');
+  const toggleTheme = () => {
+    if (theme === 'light') {
+      setTheme('dark');
+    } else {
+      setTheme('light');
+    }
+  };
+  useEffect(() => {
+    document.body.className = theme;
+  }, [theme]);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={`App ${theme}`}>
+      <button onClick={toggleTheme} className='btn'>Toggle Theme</button>
+      <h4><i class="fa-solid fa-person"></i>Amazing service</h4>
+      <form>
+        <h2>Login</h2>
+        <div className="form-control">
+          <label className='form'>Email</label><br></br><br></br>
+          <input type="text" name="email" />
+        </div><br></br>
+        <div className="form-control">
+          <label className='for'>Password</label><br></br><br></br>
+          <input type="password" name="password" />
+        </div>
+        <div className="form-control">
+          <label></label><br></br>
+          <button type="submit">Login</button>
+          <br></br>
+          <br></br>
+          <button className='lastb' type="submit">Create account </button>
+        </div>
+      </form>
     </div>
   );
 }
 
-export default App;
